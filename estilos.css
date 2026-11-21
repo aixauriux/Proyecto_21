@@ -1,0 +1,145 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f7f0ff;
+    color: #604875;
+    text-align: center;
+}
+
+main {
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+h1 {
+    color: #8e61ba;
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 21px;
+    color: #8055a8;
+}
+
+.temporizador,
+.configuracion {
+    background: #ffffff;
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 22px;
+    box-shadow: 0 5px 18px #e5d6f3;
+}
+
+nav,
+.controles {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 12px;
+    background: #e8d5fa;
+    color: #604875;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:hover,
+button.activo {
+    background: #a77bd1;
+    color: white;
+}
+
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid #8055a8;
+    outline-offset: 3px;
+}
+
+#reloj {
+    font-size: clamp(65px, 15vw, 100px);
+    font-weight: bold;
+    color: #9b70c8;
+    margin: 35px 0;
+    font-variant-numeric: tabular-nums;
+}
+
+#iniciar {
+    background: #d9c4f2;
+}
+
+#pausar {
+    background: #e8d5fa;
+}
+
+#reiniciar {
+    background: #f0dffc;
+}
+
+#iniciar:hover,
+#pausar:hover,
+#reiniciar:hover {
+    background: #a77bd1;
+    color: white;
+}
+
+.configuracion label {
+    display: block;
+    margin: 15px 0 7px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    max-width: 220px;
+    padding: 12px;
+    border: 2px solid #d4b5f0;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 16px;
+    color: #604875;
+    background: #fcf9ff;
+}
+
+#guardar {
+    display: block;
+    margin: 25px auto 0;
+    background: #b48add;
+    color: white;
+}
+
+#mensaje {
+    color: #7650a0;
+    min-height: 20px;
+}
+
+footer {
+    padding: 20px;
+    color: #987bb0;
+}
+
+@media (max-width: 600px) {
+    main {
+        margin: 10px auto;
+        padding: 12px;
+    }
+
+    .temporizador,
+    .configuracion {
+        padding: 18px 12px;
+    }
+
+    button {
+        padding: 11px;
+    }
+}

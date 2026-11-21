@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Pomodoro</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <main>
+        <h1>🍅 Mi Pomodoro</h1>
+        <p>Organiza tu tiempo y cumple tus metas</p>
+
+        <section class="temporizador">
+            <nav aria-label="Tipos de sesión">
+                <button id="trabajo" class="activo">Trabajo</button>
+                <button id="corto">Descanso corto</button>
+                <button id="largo">Descanso largo</button>
+            </nav>
+
+            <h2 id="tipo">Tiempo de trabajo</h2>
+
+            <p id="reloj" role="timer" aria-label="Tiempo restante">
+                25:00
+            </p>
+
+            <section class="controles" aria-label="Controles del temporizador">
+                <button id="iniciar">Iniciar</button>
+                <button id="pausar">Pausar</button>
+                <button id="reiniciar">Reiniciar</button>
+            </section>
+
+            <p>Sesiones completadas: <strong id="sesiones">0</strong></p>
+        </section>
+
+        <section class="configuracion">
+            <h2>⚙️ Configuración</h2>
+
+            <label for="tiempoTrabajo">Trabajo (minutos)</label>
+            <input type="number" id="tiempoTrabajo" min="1" max="180" value="25">
+
+            <label for="tiempoCorto">Descanso corto (minutos)</label>
+            <input type="number" id="tiempoCorto" min="1" max="180" value="5">
+
+            <label for="tiempoLargo">Descanso largo (minutos)</label>
+            <input type="number" id="tiempoLargo" min="1" max="180" value="15">
+
+            <button id="guardar">Guardar configuración</button>
+            <p id="mensaje" role="status" aria-live="polite"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>para estudiar mejor</p>
+    </footer>
+
+</body>
+</html>
